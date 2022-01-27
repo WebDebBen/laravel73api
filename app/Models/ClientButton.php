@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class ClientButton extends Model
 {
     use HasFactory;
-    protected $table = 'clientButtons';
+    protected $table = 'clientbuttons';
     protected $guarded = [];
 }

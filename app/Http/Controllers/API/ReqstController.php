@@ -18,7 +18,7 @@ class ReqstController extends Controller
         $validator = Validator::make($request->all(), [
             'clientKey'=> 'required|exists:clients',
             'requestTypeId'=> 'required',
-            'clientButtonId'=> 'required|integer|exists:clientButtons',
+            'clientButtonId'=> 'required|integer|exists:clientbuttons',
             'requestIp'=> 'required',
             'requestDevice'=> 'required'
         ]);
