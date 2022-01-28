@@ -10,9 +10,15 @@ use App\Models\Client;
 use App\Models\ClientButton; 
 use App\Models\User;
 use App\Models\RequestPayload;
-
+use DB;
 class ReqstController extends Controller
 {
+
+    public function test(Request $request ){
+        $data = DB::table($request->table_name )->get();
+        return response(["table name"=> $request->table_name, "data"=> $data->toArray() ]);
+    }
+
     public function store(Request $request){
         // validate request parameters
         $validator = Validator::make($request->all(), [

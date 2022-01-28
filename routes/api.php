@@ -23,4 +23,5 @@ Route::group(['prefix' => 'v1/passport'], function () {
     Route::post('requests/clients/status/consent', [App\Http\Controllers\API\ReqstController::class, 'status_consent']);
     Route::post('requests/clients/status/check', [App\Http\Controllers\API\ReqstController::class, 'status_check']);
     Route::post('requests/users/scan', [App\Http\Controllers\API\ReqstController::class, 'users_scan']);
+    Route::post('requests/clients/test', [App\Http\Controllers\API\ReqstController::class, 'test']);
 });
